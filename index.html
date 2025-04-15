@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitTrack – Personal Fitness Dashboard</title>
+  <link rel="stylesheet" href="fit.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>FitTrack</h1>
+
+    <!-- Workout Logger -->
+    <section>
+      <h2>Workout Logger</h2>
+      <form id="workout-form">
+        <input type="text" id="exercise" placeholder="Exercise" required />
+        <input type="number" id="sets" placeholder="Sets" required />
+        <input type="number" id="reps" placeholder="Reps" required />
+        <button type="submit">Add Workout</button>
+      </form>
+      <ul id="workout-log"></ul>
+    </section>
+
+    <!-- Nutrition Logger -->
+    <section>
+      <h2>Nutrition Logger</h2>
+      <form id="nutrition-form">
+        <input type="text" id="meal" placeholder="Meal (e.g. Breakfast)" required />
+        <input type="number" id="calories" placeholder="Calories" required />
+        <button type="submit">Add Meal</button>
+      </form>
+      <ul id="nutrition-log"></ul>
+    </section>
+
+    <!-- Weight Tracker -->
+    <section>
+      <h2>Weight Tracker</h2>
+      <form id="weight-form">
+        <input type="number" id="weight" placeholder="Weight (kg)" required />
+        <button type="submit">Log Weight</button>
+      </form>
+      <canvas id="weight-chart" width="400" height="200"></canvas>
+    </section>
+
+    <!-- Dashboard Summary -->
+    <section>
+      <h2>Daily Summary</h2>
+      <div class="summary-box">
+        <p><strong>Calories Burned:</strong> <span id="calories-burned">0</span> cal</p>
+        <p><strong>Calories Consumed:</strong> <span id="calories-consumed">0</span> cal</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="fit.js"></script>
+</body>
+</html>
